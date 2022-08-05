@@ -23,7 +23,6 @@ RUN unzip ./tests/bin/chromedriver_linux64.zip -d $HOME/bin
 # Resolve any dependency issues
 RUN apt update && apt -y upgrade
 
-
 # Run script that starts dev server in background, runs tests, and then kills the server
 # TODO: find a more gracefull way to do this, but this works for now.
 RUN chmod 755 ./tests/bin/test_with_server.sh

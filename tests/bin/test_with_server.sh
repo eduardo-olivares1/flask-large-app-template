@@ -2,7 +2,8 @@
 # Set ENV vars
 export FLASK_CONFIG=testing
 export PATH=$PATH:$HOME/bin
-#Start werkzueg server
+
+#Start werkzueg server in background and save PID for later
 flask run --port=5000 &
 WSGI_PID=$(echo $!)
 
