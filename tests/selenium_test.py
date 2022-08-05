@@ -7,9 +7,11 @@ class SeleniumTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # start Chrome
+        # start Chrome in headless mode (no visible browser)
         options = webdriver.ChromeOptions()
         options.add_argument("headless")
+        # Need this to run in docker container
+        options.add_argument("no-sandbox")
 
         try:
             cls.browser = webdriver.Chrome(chrome_options=options)
