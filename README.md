@@ -1,1 +1,1 @@
-# flask-template
+# Large App Template
