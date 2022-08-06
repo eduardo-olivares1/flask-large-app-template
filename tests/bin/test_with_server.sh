@@ -10,5 +10,9 @@ WSGI_PID=$(echo $!)
 #Run tests
 flask test
 
+STATUS=$?
+
 #Kill werkzueg server
 kill $WSGI_PID
+
+exit $STATUS
