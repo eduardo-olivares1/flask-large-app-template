@@ -24,6 +24,7 @@ RUN apt update && apt -y upgrade
 # Run script that starts dev server in background, runs tests, and then kills the server
 # TODO: find a more gracefull way to do this, but this works for now.
 ENV FLASK_CONFIG=testing
+RUN chmod 755 ./tests/bin/test_with_server.sh
 CMD ./tests/bin/test_with_server.sh
 
 
